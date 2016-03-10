@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<users>
+    <user id="1">
+        <first_name>Maria</first_name>
+        <last_name>Heikkinen</last_name>
+        <email>maria.heikkinen@gmail.com</email>
+        <password>5e14683c69558e550d08967f0037af3b24bee37e</password>
+        <salt>[B@7852e922</salt>
+        <role>Doctor</role>
+        
+    </user>
+
+    <user id="2">
+        <first_name>Matti</first_name>
+        <last_name>Kaupponen</last_name>
+        <email>matti.kaupponen@gmail.com</email>
+        <password>007fc56f26c2ce877583016f1d401b8e69f1d407</password>
+        <salt>[B@4e25154f</salt>
+        <role>Nurse</role>
+    </user>
+
+    <user id="3">
+        <first_name>James</first_name>
+        <last_name>Smith</last_name>
+        <email>james_3423@hotmail.com</email>
+        <password>321c94232e7abaf1a41d064b08c3f2e933db618d</password>
+        <salt>[B@70dea4e</salt>
+        <role>Nurse</role>
+    </user>
+
+    <user id="4">
+        <first_name>Helen</first_name>
+        <last_name>Lee</last_name>
+        <email>hello.helen@gmail.com</email>
+        <password>8be18823fe41b0cd3f2ea1393b3e84fc99bc9059</password>
+        <salt>[B@5c647e05</salt>
+        <role>Dentist</role>
+    </user>
+    
+    <user id="5">
+        <first_name>Jack</first_name>
+        <last_name>Jackson</last_name>
+        <email>jj34289y42@gmail.com</email>
+        <password>123</password>
+        <salt></salt>
+        <role>Nurse</role>
+    </user>
+    
+    <user id="6">
+        <first_name>Leena</first_name>
+        <last_name>Erikoinen</last_name>
+        <email>leena@gmail.com</email>
+        <password>1d995f68536bbeccc68bd2ac5c7eed55f943487e</password>
+        <salt>[B@33909752</salt>
+        <role>Nurse</role>
+    </user>
+    
+    <user id="7">
+        <first_name>Haisuli</first_name>
+        <last_name>Haisulinen</last_name>
+        <email>haisuli@gmail.com</email>
+        <password>a815c28bd29423c25f2f85931f6fd4c42cbef3d7</password>
+        <salt>[B@55f96302</salt>
+        <role>Doctor</role>
+    </user>
+    
+    <user id="8">
+        <first_name>Ash</first_name>
+        <last_name>Ketchum</last_name>
+        <email>ash@gmail.com</email>
+        <password>123</password>
+        <salt></salt>
+        <role>Pokemon trainer</role>
+    </user>
+    
+    <user id="9">
+        <first_name>George</first_name>
+        <last_name>Washington</last_name>
+        <email>g.w@gmail.com</email>
+        <password>71e4284d58fb008905717d6cd542ec2d9a67a19a</password>
+        <salt>[B@3d4eac69</salt>
+        <role>Nurse</role>
+    </user>
+    
+    <user id="10">
+        <first_name>Milja</first_name>
+        <last_name>Mammutti</last_name>
+        <email>mima_123@gmail.com</email>
+        <password>da2443e43c1ac400753bfc0be2085d56f6e730a2</password>
+        <salt>[B@6bc7c054</salt>
+        <role>Receptionist</role>
+    </user>
+    
+    <user id="11">
+        <first_name>Siiri</first_name>
+        <last_name>Sammakko</last_name>
+        <email>sipsa007@email.com</email>
+        <password>e505d93176462354380875275f40469246afa4c1</password>
+        <salt>[B@232204a1</salt>
+        <role>Consulting specialist</role>
+    </user>
+    
+    <user id="12">
+        <first_name>Sakari</first_name>
+        <last_name>Suksi</last_name>
+        <email>saksikasisakari@email.com</email>
+        <password>11584f366bded3d7f2a5c2b602cbc9f8862b5752</password>
+        <salt>[B@4aa298b7</salt>
+        <role>Nurse</role>
+    </user>
+
+</users>
