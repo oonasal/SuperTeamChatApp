@@ -7,7 +7,6 @@ var messageReceiver = "receiver";
 var messageContents;
 var userFullName;
 
-
 function replaceContentInContainer(current, replacement) {
     document.getElementById(current).innerHTML = document.getElementById(replacement).innerHTML;
 }
