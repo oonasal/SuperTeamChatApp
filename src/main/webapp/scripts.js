@@ -7,83 +7,10 @@ var messageReceiver = "receiver";
 var messageContents;
 var userFullName;
 
-/*function SwapDivsWithClick(div1,div2)
- {
- d1 = document.getElementById(div1);
- d2 = document.getElementById(div2);
- if( d2.style.display == "none" )
- {
- d1.style.display = "none";
- d2.style.display = "block";
- }
- else
- {
- d1.style.display = "block";
- d2.style.display = "none";
- }
- }*/
 
 function replaceContentInContainer(current, replacement) {
     document.getElementById(current).innerHTML = document.getElementById(replacement).innerHTML;
 }
-
-//search function
-/*function showResult(str) {
- "use strict"; 
- if (str.length==0) {  
- document.getElementById("search").innerHTML="";
- document.getElementById("search").style.border="0px";
- return;
- }
- if (window.XMLHttpRequest) {
- // code for IE7+, Firefox, Chrome, Opera, Safari
- xmlhttp=new XMLHttpRequest();
- } else {  // code for IE6, IE5
- xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
- }
- xmlhttp.onreadystatechange=function() {
- if (xmlhttp.readyState==4 && xmlhttp.status==200) {
- document.getElementById("search").innerHTML=xmlhttp.responseText;
- document.getElementById("search").style.border="1px solid #A5ACB2";
- }
- }
- xmlhttp.open("GET","search.php?q="+str,true);
- xmlhttp.send();
- }
- 
- //email validation in login screen
- 
- function validateForm() {
- "use strict"; 
- var email = document.login.email.value;
- var pass = document.login.password.value;
- var username = "email"; 
- var password = "password";
- if ((email == username) && (pass == password)) {
- return true;
- }
- else {
- alert ("Login was unsuccessful, please check your username and password!");
- return false;
- }
- }
- 
- //password verification on reset login page
- 
- function	validatePassword() {
- "use strict"; 
- if(input.email.value == "") {
- alert("Error: E-mail cannot be blank!");
- input.email.focus();
- return false;
- }
- re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ ;
- if(!re.test(input.email.value)) {
- alert("Error: E-mail must contain only letters, numbers and special symbols!");
- input.email.focus();
- return false;
- }*/
-
 
 /* When the user clicks on the button, 
  toggle between hiding and showing the dropdown content */

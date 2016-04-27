@@ -14,7 +14,7 @@ public class Validate {
 
     public static boolean checkUser(String email, String pass) throws IOException {
         try {
-            File fXmlFile = new File("src/main/webapp/users.xml");
+            File fXmlFile = new File("C:/Users/Oona/Documents/NetBeansProjects/SuperTeamApp/SuperTeamAppWithLogin2/src/main/webapp/users.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(fXmlFile);

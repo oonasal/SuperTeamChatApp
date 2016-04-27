@@ -18,7 +18,7 @@ public class ProfileService implements Serializable {
     private transient FileLoader fileLoader;
 
     public ProfileService() {
-        file = new File("src/main/java/files/profiles.data");
+        file = new File("C:/Users/Oona/Documents/NetBeansProjects/SuperTeamApp/SuperTeamAppWithLogin2/src/main/java/files/profiles.data");
         fileLoader = new FileLoader();
         
         if(!(getReadProfiles(file) == null)) {

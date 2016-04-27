@@ -35,10 +35,10 @@ public class UserService implements Serializable {
     private transient Profile profile;
 
     public UserService() {
-        file1 = new File("src/main/java/files/users.data");
-        file2 = new File("src/main/java/files/doctors.data");
-        file3 = new File("src/main/java/files/nurses.data");
-        file4 = new File("src/main/java/files/specialists.data");
+        file1 = new File("C:/Users/Oona/Documents/NetBeansProjects/SuperTeamApp/SuperTeamAppWithLogin2/src/main/java/files/users.data");
+        file2 = new File("C:/Users/Oona/Documents/NetBeansProjects/SuperTeamApp/SuperTeamAppWithLogin2/src/main/java/files/doctors.data");
+        file3 = new File("C:/Users/Oona/Documents/NetBeansProjects/SuperTeamApp/SuperTeamAppWithLogin2/src/main/java/files/nurses.data");
+        file4 = new File("C:/Users/Oona/Documents/NetBeansProjects/SuperTeamApp/SuperTeamAppWithLogin2/src/main/java/files/specialists.data");
         fileLoader = new FileLoader();
 
         if (!(getReadUsers(file1) == null)) {

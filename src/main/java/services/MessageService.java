@@ -19,7 +19,7 @@ public class MessageService implements Serializable {
     private transient File file;
 
     public MessageService() {
-        file = new File("src/main/java/files/messages.data");
+        file = new File("C:/Users/Oona/Documents/NetBeansProjects/SuperTeamApp/SuperTeamAppWithLogin2/src/main/java/files/messages.data");
         fileLoader = new FileLoader();
 
         if (!(getReadMessages() == null)) {
