@@ -30,7 +30,6 @@ public class ApplicationConfig extends Application {
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(resources.AlertResource.class);
-        resources.add(resources.GenericResource.class);
         resources.add(resources.MessageResource.class);
         resources.add(resources.ProfileResource.class);
         resources.add(resources.TaskResource.class);

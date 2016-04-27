@@ -1,27 +1,37 @@
 package models;
 
 import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
 
+@Entity
 @XmlRootElement
 public class Profile implements Serializable {
 
+    /**
+     *
+     * @author Oona
+     */
     private String firstName;
     private String lastName;
     private String fullName;
     private String jobTitle;
     private String phoneNumber;
     private String email;
+
+    @Id
+    @GeneratedValue
     private int id;
 
     public Profile() {
-
     }
 
     public Profile(String firstName, String lastName, String email, int id) {
         this(firstName, lastName, "", "", email, id);
     }
-    
+
     public Profile(String firstName, String lastName, String jobTitle, String email, int id) {
         this(firstName, lastName, jobTitle, "", email, id);
     }

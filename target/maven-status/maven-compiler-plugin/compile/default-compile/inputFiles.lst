@@ -11,6 +11,7 @@ C:\Users\Oona\Documents\NetBeansProjects\SuperTeamApp\SuperTeamAppWithLogin2\src
 C:\Users\Oona\Documents\NetBeansProjects\SuperTeamApp\SuperTeamAppWithLogin2\src\main\java\resources\ApplicationConfig.java
 C:\Users\Oona\Documents\NetBeansProjects\SuperTeamApp\SuperTeamAppWithLogin2\src\main\java\models\Task.java
 C:\Users\Oona\Documents\NetBeansProjects\SuperTeamApp\SuperTeamAppWithLogin2\src\main\java\services\MessageService.java
+C:\Users\Oona\Documents\NetBeansProjects\SuperTeamApp\SuperTeamAppWithLogin2\src\main\java\main\HibernateUtil.java
 C:\Users\Oona\Documents\NetBeansProjects\SuperTeamApp\SuperTeamAppWithLogin2\src\main\java\beans\NursesListBean.java
 C:\Users\Oona\Documents\NetBeansProjects\SuperTeamApp\SuperTeamAppWithLogin2\src\main\java\websocket\ServerEndPoint.java
 C:\Users\Oona\Documents\NetBeansProjects\SuperTeamApp\SuperTeamAppWithLogin2\src\main\java\services\UserService.java
@@ -24,5 +25,4 @@ C:\Users\Oona\Documents\NetBeansProjects\SuperTeamApp\SuperTeamAppWithLogin2\src
 C:\Users\Oona\Documents\NetBeansProjects\SuperTeamApp\SuperTeamAppWithLogin2\src\main\java\beans\ListBean.java
 C:\Users\Oona\Documents\NetBeansProjects\SuperTeamApp\SuperTeamAppWithLogin2\src\main\java\models\User.java
 C:\Users\Oona\Documents\NetBeansProjects\SuperTeamApp\SuperTeamAppWithLogin2\src\main\java\security\HashPass.java
-C:\Users\Oona\Documents\NetBeansProjects\SuperTeamApp\SuperTeamAppWithLogin2\src\main\java\resources\GenericResource.java
 C:\Users\Oona\Documents\NetBeansProjects\SuperTeamApp\SuperTeamAppWithLogin2\src\main\java\resources\TaskResource.java

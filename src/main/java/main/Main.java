@@ -1,5 +1,7 @@
 package main;
 
+import models.User;
+import org.hibernate.Session;
 import services.AlertService;
 import services.MessageService;
 import services.ProfileService;
@@ -9,9 +11,12 @@ import services.UserService;
 
 public class Main {
     
-    
     public static void main(String[] args) {
+        initialDatabaseSetup();
         
+    }
+    
+    public static void initialSerializedSetup() {
         AlertService as = new AlertService();
         //as.addAlertsToTestDatabase();
         System.out.println("alert: " + as.getAlert(1).getAlertContent());
@@ -39,6 +44,27 @@ public class Main {
         //Profile p = new Profile("Ash", "Ketchum", "Pokemon trainer", "ash@gmail.com", 8);
         //ps.addProfile(p);
         System.out.println("profile added");
+    }
+    
+    public static void initialDatabaseSetup() {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+
+        User user = new User();
+        user.setFirstName("Aku");
+        user.setLastName("Ankka");
+        user.setEmail("aku13@gmail.com");
+        
+        User user2 = new User();
+        user2.setFirstName("Mikki");
+        user2.setLastName("Hiiri");
+        user2.setEmail("hiiri566@gmail.com");
+        
+        session.saveOrUpdate(user);
+        session.saveOrUpdate(user2);
+        
+        session.getTransaction().commit();
+        session.close();
     }
     
 }

@@ -5,19 +5,28 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+@Entity
 @XmlRootElement
 public class Alert implements Serializable {
 
     /**
      *
+     * @author Oona
      */
     private static final long serialVersionUID = -2532752231158282480L;
     private String senderName;
     private int senderId;
+
+    @Id
+    @GeneratedValue
     private int alertId;
+
     private static int alertIdCounter;
     private String receiverName;
     private int receiverId;
@@ -27,7 +36,7 @@ public class Alert implements Serializable {
     public Alert() {
 
     }
-    
+
     public Alert(String senderName, String receiverName, String alertContent) {
         this.senderName = senderName;
         this.receiverName = receiverName;

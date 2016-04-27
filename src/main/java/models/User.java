@@ -1,18 +1,27 @@
 package models;
 
 import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import services.ProfileService;
 
+@Entity
 @XmlRootElement
 public class User implements Serializable {
 
     /**
      *
+     * @author Oona
      */
     private static final long serialVersionUID = -3550144232479495572L;
+    
+    @Id
+    @GeneratedValue
     private int userId;
+    
     private String firstName;
     private String lastName;
     private String role; //"doctor", "nurse" or something else
@@ -26,7 +35,6 @@ public class User implements Serializable {
 
     //private transient HashMap<Integer, Profile> profiles = new HashMap<>();
     public User() {
-
     }
 
     public User(String firstName, String lastName, String role, String email, int userId) {

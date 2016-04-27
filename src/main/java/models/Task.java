@@ -5,17 +5,29 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+@Entity
 @XmlRootElement
 public class Task implements Serializable {
 
+    /**
+     *
+     * @author Oona
+     */
     private transient Date taskGivenDate;
     private String taskCompleteDate;
     private String sentBy;
     private int senderId;
+
+    @Id
+    @GeneratedValue
     private int taskId;
+
     private static int taskIdCounter;
     private String receiverName;
     private int receiverId;
@@ -23,9 +35,8 @@ public class Task implements Serializable {
     private boolean taskCompleted;
 
     public Task() {
-
     }
-    
+
     public Task(String sentBy, int senderId, String receiverName, int receiverId, String taskContent) {
         this("", sentBy, senderId, receiverName, receiverId, taskContent);
     }

@@ -13,9 +13,6 @@ import models.Alert;
 
 public class AlertService implements Serializable {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = -4596245664039001961L;
     private transient FileLoader fileLoader;
 
@@ -26,11 +23,11 @@ public class AlertService implements Serializable {
     public AlertService() {
         file = new File("C:/Users/Oona/Documents/NetBeansProjects/SuperTeamApp/SuperTeamAppWithLogin2/src/main/java/files/alerts.data");
         fileLoader = new FileLoader();
-        
-        if(!(getReadAlerts() == null)) {
+
+        if (!(getReadAlerts() == null)) {
             alerts = getReadAlerts();
         }
-        
+
     }
 
     private void writeObject(ObjectOutputStream out) throws IOException {
@@ -45,16 +42,17 @@ public class AlertService implements Serializable {
     }
 
     //for testing purposes; can be removed
-	public void addAlertsToTestDatabase() {
-		Alert alert1 = new Alert("Milja Mammutti", 10, "Haisuli Haisulinen", 7, "Jäätelö loppu!!!!!");
-		alerts.put(alert1.getAlertId(), alert1);
-		fileLoader.saveAlertsToFile(alerts, file);
-                //System.out.println("Added test alerts");
-		
-	}
+    public void addAlertsToTestDatabase() {
+        Alert alert1 = new Alert("Milja Mammutti", 10, "Haisuli Haisulinen", 7, "Jäätelö loppu!!!!!");
+        alerts.put(alert1.getAlertId(), alert1);
+        fileLoader.saveAlertsToFile(alerts, file);
+        //System.out.println("Added test alerts");
+
+    }
+
     //returns alerts as an arraylist
     public ArrayList<Alert> getAllAlerts() {
-        System.out.println("alerts #: " + alerts.size());
+        //System.out.println("alerts #: " + alerts.size());
         return new ArrayList<>(alerts.values());
     }
 

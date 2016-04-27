@@ -6,7 +6,7 @@ models\User.class
 models\Alert.class
 beans\SpecialistsListBean.class
 main\Main.class
-resources\GenericResource.class
+main\HibernateUtil.class
 servlets\Validate.class
 database\FileLoader.class
 services\UserService.class
