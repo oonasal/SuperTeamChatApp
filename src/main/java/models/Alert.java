@@ -11,7 +11,7 @@ import javax.persistence.Id;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-@Entity
+@Entity (name = "alert_details")
 @XmlRootElement
 public class Alert implements Serializable {
 

@@ -8,8 +8,15 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import main.HibernateUtil;
+import models.Alert;
 
 import models.Message;
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 
 public class MessageService implements Serializable {
 
@@ -46,8 +53,19 @@ public class MessageService implements Serializable {
     }
 
     //returns messages as an arraylist
-    public ArrayList<Message> getAllMessages() {
-        return new ArrayList<>(messages.values());
+    public List<Message> getAllMessages() {
+        
+        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+        Session session = sessionFactory.openSession();
+        Transaction tr = session.beginTransaction();
+
+        Criteria criteria = session.createCriteria(Message.class);
+        List<Message> messageList = (List<Message>) criteria.list();
+        tr.commit();
+        session.close();
+        return messageList;
+        
+        //return new ArrayList<>(messages.values());
     }
 
     //returns a particular message
@@ -57,9 +75,16 @@ public class MessageService implements Serializable {
 
     //adds a message to the messages hashmap and saves it to the file
     public Message addMessage(Message message) {
-        message.setMessageId(messages.size() + 1);
+        /*message.setMessageId(messages.size() + 1);
         messages.put(message.getMessageId(), message);
         saveMessages();
+        return message;*/
+        
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        session.saveOrUpdate(message);
+        session.getTransaction().commit();
+        session.close();
         return message;
     }
 

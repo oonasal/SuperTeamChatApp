@@ -6,10 +6,15 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import main.HibernateUtil;
 
 import models.Alert;
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 
 public class AlertService implements Serializable {
 
@@ -51,9 +56,19 @@ public class AlertService implements Serializable {
     }
 
     //returns alerts as an arraylist
-    public ArrayList<Alert> getAllAlerts() {
-        //System.out.println("alerts #: " + alerts.size());
-        return new ArrayList<>(alerts.values());
+    public List<Alert> getAllAlerts() {
+
+        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+        Session session = sessionFactory.openSession();
+        Transaction tr = session.beginTransaction();
+
+        Criteria criteria = session.createCriteria(Alert.class);
+        List<Alert> alertList = (List<Alert>) criteria.list();
+        tr.commit();
+        session.close();
+        return alertList;
+
+        //return new ArrayList<>(alerts.values());
     }
 
     //returns a particular alert
@@ -63,10 +78,20 @@ public class AlertService implements Serializable {
 
     //adds an alert to the alerts hashmap and saves it to the file
     public Alert addAlert(Alert alert) {
-        alert.setAlertId(alerts.size() + 1);
+        /* alert.setAlertId(alerts.size() + 1);
         alerts.put(alert.getAlertId(), alert);
         saveAlerts();
+        return alert;*/
+
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        alert.setAlertContent("ahdkajsdn");
+        session.saveOrUpdate(alert);
+
+        session.getTransaction().commit();
+        session.close();
         return alert;
+
     }
 
     //updates an existing alert and saves it to the file

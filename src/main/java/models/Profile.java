@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@Entity
+@Entity (name = "profile_details")
 @XmlRootElement
 public class Profile implements Serializable {
 

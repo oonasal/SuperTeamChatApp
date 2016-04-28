@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
 import services.ProfileService;
 
-@Entity
+@Entity (name = "user_details")
 @XmlRootElement
 public class User implements Serializable {
 
