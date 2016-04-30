@@ -32,6 +32,7 @@ public class ApplicationConfig extends Application {
         resources.add(resources.AlertResource.class);
         resources.add(resources.MessageResource.class);
         resources.add(resources.ProfileResource.class);
+        resources.add(resources.ResponseResource.class);
         resources.add(resources.TaskResource.class);
         resources.add(resources.UserResource.class);
     }
