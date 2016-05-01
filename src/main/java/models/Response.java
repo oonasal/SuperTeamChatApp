@@ -20,6 +20,16 @@ public class Response {
         password = "";
     }
 
+    public Response(boolean loginSuccessful, String email, String firstName, String lastName, String password) {
+        this.loginSuccessful = loginSuccessful;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.password = password;
+    }
+    
+    
+
     public boolean isLoginSuccessful() {
         return loginSuccessful;
     }
