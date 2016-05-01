@@ -6,11 +6,9 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import main.HibernateUtil;
-import models.Alert;
 
 import models.Message;
 import org.hibernate.Criteria;
@@ -26,12 +24,12 @@ public class MessageService implements Serializable {
     private transient File file;
 
     public MessageService() {
-        file = new File("C:/Users/Oona/Documents/NetBeansProjects/SuperTeamApp/SuperTeamAppWithLogin2/src/main/java/files/messages.data");
+        /*file = new File("C:/Users/Oona/Documents/NetBeansProjects/SuperTeamApp/SuperTeamAppWithLogin2/src/main/java/files/messages.data");
         fileLoader = new FileLoader();
 
         if (!(getReadMessages() == null)) {
             messages = getReadMessages();
-        }
+        }*/
     }
 
     private void writeObject(ObjectOutputStream out) throws IOException {

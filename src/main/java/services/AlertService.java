@@ -26,12 +26,12 @@ public class AlertService implements Serializable {
     private transient File file;
 
     public AlertService() {
-        file = new File("C:/Users/Oona/Documents/NetBeansProjects/SuperTeamApp/SuperTeamAppWithLogin2/src/main/java/files/alerts.data");
+        /*file = new File("C:/Users/Oona/Documents/NetBeansProjects/SuperTeamApp/SuperTeamAppWithLogin2/src/main/java/files/alerts.data");
         fileLoader = new FileLoader();
 
         if (!(getReadAlerts() == null)) {
             alerts = getReadAlerts();
-        }
+        }*/
 
     }
 

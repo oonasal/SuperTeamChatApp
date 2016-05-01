@@ -6,10 +6,15 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import main.HibernateUtil;
 
 import models.Task;
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 
 public class TaskService implements Serializable {
 
@@ -19,12 +24,12 @@ public class TaskService implements Serializable {
     private transient File file;
 
     public TaskService() {
-        file = new File("C:/Users/Oona/Documents/NetBeansProjects/SuperTeamApp/SuperTeamAppWithLogin2/src/main/java/files/tasks.data");
+        /*file = new File("C:/Users/Oona/Documents/NetBeansProjects/SuperTeamApp/SuperTeamAppWithLogin2/src/main/java/files/tasks.data");
         fileLoader = new FileLoader();
         
         if(!(getReadTasks() == null)) {
             tasks = getReadTasks();
-        }
+        }*/
     }
     
     private void writeObject(ObjectOutputStream out) throws IOException {
@@ -45,8 +50,18 @@ public class TaskService implements Serializable {
         fileLoader.saveTasksToFile(tasks, file);
     }
 
-    public ArrayList<Task> getAllTasks() {
-        return new ArrayList<>(tasks.values());
+    public List<Task> getAllTasks() {
+        //eturn new ArrayList<>(tasks.values());
+        
+        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+        Session session = sessionFactory.openSession();
+        Transaction tr = session.beginTransaction();
+
+        Criteria criteria = session.createCriteria(Task.class);
+        List<Task> taskList = (List<Task>) criteria.list();
+        tr.commit();
+        session.close();
+        return taskList;
     }
 
     public Task getTask(int taskId) {
@@ -54,9 +69,17 @@ public class TaskService implements Serializable {
     }
 
     public Task addTask(Task task) {
-        task.setTaskId(tasks.size() + 1);
+        /*task.setTaskId(tasks.size() + 1);
         tasks.put(task.getTaskId(), task);
         saveTasks();
+        return task;*/
+        
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        session.saveOrUpdate(task);
+
+        session.getTransaction().commit();
+        session.close();
         return task;
     }
 
