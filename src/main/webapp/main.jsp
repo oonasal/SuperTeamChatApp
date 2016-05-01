@@ -81,15 +81,15 @@
 
     <!--Dropdown menu-->
     <div class="container-fluid">
-        <h4>Pick a person from the categories below to start a conversation</h4>
+        <!--<h4>Pick a person from the categories below to start a conversation</h4>-->
+        <h4>Pick a person from the menu below to start a conversation</h4>
         
-        <jsp:useBean id="obj" class="beans.ListBean" scope="page"/>
         
         <jsp:useBean id="obj1" class="beans.DoctorsListBean" scope="page"/>
         <jsp:useBean id="obj2" class="beans.NursesListBean" scope="page"/>
         <jsp:useBean id="obj3" class="beans.SpecialistsListBean" scope="page"/>
 
-        <div class="dropdown">
+        <!--<div class="dropdown">
             <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Doctors <span class="caret"></span></button>
             <ul class="dropdown-menu">
                 <c:forEach var="doctor" items="${obj1.doctors}">
@@ -112,7 +112,7 @@
                                     <li><a href="#" onClick="replaceContentInContainer('motd', 'chat'); return false;">${specialist}</a></li>
                                     </c:forEach>
             </ul>
-        </div>
+        </div>-->
 
         <div class="dropdown">
             <button id="onlinebutton" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Online <span class="caret"></span></button>

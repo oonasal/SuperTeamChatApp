@@ -108,11 +108,11 @@ public class ServerEndPoint {
         //send message to the receiver and back to the sender
         for (Session s : sessions) {
             if (s.getId().equals(receiverSessionId)) {
-                s.getBasicRemote().sendText(buildJsonMessageData(senderName, messageToSend));
+                s.getBasicRemote().sendText(buildJsonMessageData(senderName + " (Private)", messageToSend));
             }
             if (s.getId().equals(senderSessionId)) {
                 if (!(messageToSend.equals(""))) {
-                    s.getBasicRemote().sendText(buildJsonMessageData(senderName, messageToSend));
+                    s.getBasicRemote().sendText(buildJsonMessageData(senderName + " (Private)", messageToSend));
                 }
             }
             if (messageToSend.equals("")) {
