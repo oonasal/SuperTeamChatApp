@@ -85,7 +85,6 @@ public class AlertService implements Serializable {
 
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
-        alert.setAlertContent("ahdkajsdn");
         session.saveOrUpdate(alert);
 
         session.getTransaction().commit();

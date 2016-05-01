@@ -28,8 +28,6 @@ public class Response {
         this.password = password;
     }
     
-    
-
     public boolean isLoginSuccessful() {
         return loginSuccessful;
     }

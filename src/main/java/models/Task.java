@@ -28,7 +28,7 @@ public class Task implements Serializable {
     @GeneratedValue
     private int taskId;
 
-    private static int taskIdCounter;
+    //private static int taskIdCounter;
     private String receiverName;
     private int receiverId;
     private String taskContent;
@@ -43,8 +43,8 @@ public class Task implements Serializable {
 
     public Task(String taskCompleteDate, String sentBy, int senderId, String receiverName, int receiverId,
             String taskContent) {
-        taskIdCounter++;
-        this.taskId = taskIdCounter;
+        //taskIdCounter++;
+        //this.taskId = taskIdCounter;
         this.taskGivenDate = new Date();
         this.taskCompleteDate = taskCompleteDate;
         this.taskCompleted = false;

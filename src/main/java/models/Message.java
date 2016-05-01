@@ -23,7 +23,7 @@ public class Message implements Serializable {
     @GeneratedValue
     private int messageId;
 
-    private static int messageIdCounter;
+    //private static int messageIdCounter;
     private int senderId;
     private String messageContent;
     private String sender;
@@ -34,8 +34,8 @@ public class Message implements Serializable {
     }
 
     public Message(String sender, String receiver, String messageContent) {
-        messageIdCounter++;
-        this.messageId = messageIdCounter;
+        //messageIdCounter++;
+        //this.messageId = messageIdCounter;
         //this.senderId = senderId;
         this.sender = sender;
         this.receiver = receiver;

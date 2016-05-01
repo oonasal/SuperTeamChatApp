@@ -5,7 +5,6 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import models.Request;
 import models.Response;
 import org.json.JSONObject;
 import services.ResponseService;
@@ -23,9 +22,9 @@ public class ResponseResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response getResponse(String request) {
-//        Response r = new Response();
-//        String email = r.getEmail();
-//        String password = r.getPassword();
+        
+//        String email = response.getEmail();
+//        String password = response.getPassword();
 //        return responseService.getResponse(email, password);
         JSONObject js = new JSONObject(request);
         String email = js.getString("email");

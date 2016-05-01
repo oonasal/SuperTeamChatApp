@@ -27,7 +27,7 @@ public class Alert implements Serializable {
     @GeneratedValue
     private int alertId;
 
-    private static int alertIdCounter;
+    //private static int alertIdCounter;
     private String receiverName;
     private int receiverId;
     private transient Date sendingDateAndTime;
@@ -41,13 +41,13 @@ public class Alert implements Serializable {
         this.senderName = senderName;
         this.receiverName = receiverName;
         this.alertContent = alertContent;
-        alertIdCounter++;
+        //alertIdCounter++;
         this.sendingDateAndTime = new Date();
     }
 
     public Alert(String senderName, int senderId, String receiverName, int receiverId, String alertContent) {
-        alertIdCounter++;
-        this.alertId = alertIdCounter;
+        //alertIdCounter++;
+        //this.alertId = alertIdCounter;
         this.sendingDateAndTime = new Date();
         this.receiverName = receiverName;
         this.receiverId = receiverId;

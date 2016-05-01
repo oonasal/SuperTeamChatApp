@@ -14,9 +14,6 @@ import models.User;
 
 public class UserService implements Serializable {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = -797406039349190411L;
 
     //private HashMap<Integer, User> users = TestDatabase.getUsers();
