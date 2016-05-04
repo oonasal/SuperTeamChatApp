@@ -21,17 +21,16 @@ public class ResponseResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getResponse(String request) {
+    public Response getResponse(/*String request*/ Response response) {
         
-//        String email = response.getEmail();
-//        String password = response.getPassword();
-//        return responseService.getResponse(email, password);
-        JSONObject js = new JSONObject(request);
-        String email = js.getString("email");
-        String password = js.getString("password");
-        
-        // TODO : User service....move to Hibernate 
+        String email = response.getEmail();
+        String password = response.getPassword();
         return responseService.getResponse(email, password);
-//        return new Response(true,email,"Test","Testnimi",password);
+        /*JSONObject js = new JSONObject(request);
+        String email = js.getString("email");
+        String password = js.getString("password");*/
+        
+        //return responseService.getResponse(email, password);
+        //return new Response(true,email,"Test","Testnimi",password);
     }
 }

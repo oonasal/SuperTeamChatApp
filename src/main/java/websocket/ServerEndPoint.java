@@ -71,9 +71,13 @@ public class ServerEndPoint {
             if (receiverName.equals("Everyone")) {
                 for (Session s : sessions) {
                     s.getBasicRemote().sendText(buildJsonMessageData(senderName, messageToSend));
-                    
                 }
-                
+            } else if((receiverName.length() > 0) && (messageToSend.length() == 0)) {
+                messageToSend = receiverName.trim();
+                receiverName = "Everyone";
+                for (Session s : sessions) {
+                    s.getBasicRemote().sendText(buildJsonMessageData(senderName, messageToSend));
+                }
             } else {
                 sendMessageToUser(receiverName, senderName, messageToSend);
                 

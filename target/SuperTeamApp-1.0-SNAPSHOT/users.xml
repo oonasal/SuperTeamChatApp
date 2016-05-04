@@ -42,8 +42,8 @@
         <first_name>Jack</first_name>
         <last_name>Jackson</last_name>
         <email>jj34289y42@gmail.com</email>
-        <password>123</password>
-        <salt></salt>
+        <password>ba9f2f6f1ec2f6a4ce4821c7dbb250e482c6e263</password>
+        <salt>[B@7d4991ad</salt>
         <role>Nurse</role>
     </user>
     
@@ -69,8 +69,8 @@
         <first_name>Ash</first_name>
         <last_name>Ketchum</last_name>
         <email>ash@gmail.com</email>
-        <password>123</password>
-        <salt></salt>
+        <password>1136d88bfa2676683debece641aebd2627aea638</password>
+        <salt>[B@28d93b30</salt>
         <role>Pokemon trainer</role>
     </user>
     
